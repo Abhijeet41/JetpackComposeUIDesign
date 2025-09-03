@@ -1,4 +1,4 @@
-package com.abhi41.composeuipractice.screen.model
+package com.abhi41.composeuipractice.model
 
 import androidx.compose.ui.graphics.painter.Painter
 
