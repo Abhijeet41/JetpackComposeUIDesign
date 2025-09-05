@@ -1,8 +1,7 @@
-package com.abhi41.composeuipractice.screen.splash_screen
+package com.abhi41.composeuipractice.screen.RealEastateScreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer

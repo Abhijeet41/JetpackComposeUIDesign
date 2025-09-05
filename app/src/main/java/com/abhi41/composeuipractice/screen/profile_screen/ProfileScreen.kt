@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -60,7 +61,10 @@ fun ProfileScreen() {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        TopAppBar("Abhijeet Mule", modifier = Modifier.padding(10.dp))
+        TopAppBar(
+            "Abhijeet Mule",
+            modifier = Modifier.padding(10.dp).statusBarsPadding()
+        )
         Spacer(modifier = Modifier.height(4.dp))
         ProfileSection()
         ButtonSection(modifier = Modifier.fillMaxWidth())
@@ -109,11 +113,11 @@ fun ProfileScreen() {
                 )
             ),
             modifier = Modifier.fillMaxWidth(),
-            { it->
+            { it ->
                 selectedTabIndex = it
             }
         )
-        when(selectedTabIndex){
+        when (selectedTabIndex) {
             0 -> PostSection(
                 posts = listOf(
                     painterResource(id = R.drawable.kmm),
@@ -415,7 +419,7 @@ fun PostTabView(
                 selected = isSelected,
                 selectedContentColor = Color.Black,
                 unselectedContentColor = inactiveColor,
-                onClick =  {
+                onClick = {
                     selectedTabIndex = index
                     onTabSelected(index)
                 }
