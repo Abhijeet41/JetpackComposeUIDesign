@@ -4,10 +4,12 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -55,13 +57,17 @@ fun SearchRow(modifier: Modifier = Modifier) {
             value = query,
             onValueChange = { query = it },
             placeholder = {
-                Text("Street, Address, City...", color = colorResource(R.color.gray))
+                Text(
+                    text = "Street, Address, City...",
+                    color = colorResource(R.color.gray)
+                )
             },
             leadingIcon = {
                 Image(
                     painter = painterResource(id = R.drawable.search_icon),
                     contentDescription = null,
                     modifier = Modifier.size(18.dp)
+
                 )
             }
         )

@@ -63,12 +63,13 @@ fun ProfileScreen() {
     ) {
         TopAppBar(
             "Abhijeet Mule",
-            modifier = Modifier.padding(10.dp).statusBarsPadding()
+            modifier = Modifier
+                .padding(10.dp)
+                .statusBarsPadding()
         )
         Spacer(modifier = Modifier.height(4.dp))
         ProfileSection()
         ButtonSection(modifier = Modifier.fillMaxWidth())
-        Spacer(modifier = Modifier.height(25.dp))
         StoryHighlightSection(
             highlights = listOf(
                 StoryHighlight(
@@ -90,7 +91,7 @@ fun ProfileScreen() {
             ),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(20.dp)
+                .padding(horizontal = 20.dp, vertical = 10.dp)
         )
 
         PostTabView(
@@ -179,7 +180,7 @@ fun ProfileSection() {
     ) {
         Row(
             modifier = Modifier
-                .padding(20.dp)
+                .padding(top = 20.dp, start = 20.dp, end = 20.dp)
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -305,7 +306,7 @@ fun ButtonSection(modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
         val minWidth = 95.dp
-        val height = 30.dp
+        val height = 35.dp
         ActionButton(
             text = "Following",
             modifier = Modifier
@@ -358,7 +359,12 @@ fun ActionButton(
         }
         if (text.isNotEmpty()) {
             Spacer(modifier = Modifier.width(5.dp))
-            Text(text = text, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+            Text(
+                modifier = Modifier.padding(end = 5.dp),
+                text = text,
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp
+            )
         }
 
     }

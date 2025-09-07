@@ -1,6 +1,7 @@
 package com.abhi41.composeuipractice.screen.RealEastateScreen.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -31,7 +32,7 @@ fun HeaderSection(modifier: Modifier = Modifier) {
             )
             .fillMaxWidth()
             .statusBarsPadding(),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         Image(
             modifier = Modifier
@@ -45,7 +46,7 @@ fun HeaderSection(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .padding(start = 8.dp)
                 .weight(1f),
-            horizontalAlignment = Alignment.CenterHorizontally
+            verticalArrangement = Arrangement.Center,
         ) {
             Text("Welcome", color = colorResource(R.color.gray), fontSize = 14.sp)
             Text(
@@ -54,12 +55,13 @@ fun HeaderSection(modifier: Modifier = Modifier) {
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold
             )
-            Image(
-                painter = painterResource(id = R.drawable.bell_icon),
-                contentDescription = null,
-                modifier = Modifier.size(48.dp)
-            )
+
         }
+        Image(
+            painter = painterResource(id = R.drawable.bell_icon),
+            contentDescription = null,
+            modifier = Modifier.size(48.dp)
+        )
     }
 }
 

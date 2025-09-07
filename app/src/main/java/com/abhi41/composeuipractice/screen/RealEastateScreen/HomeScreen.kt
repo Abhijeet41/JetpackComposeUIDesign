@@ -14,6 +14,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.abhi41.composeuipractice.R
+import com.abhi41.composeuipractice.screen.RealEastateScreen.components.CategoriesRow
 import com.abhi41.composeuipractice.screen.RealEastateScreen.components.HeaderSection
 import com.abhi41.composeuipractice.screen.RealEastateScreen.components.SearchRow
 import com.abhi41.composeuipractice.screen.sample_data.sampleProperties
@@ -32,6 +33,8 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         item {HeaderSection()}
         item{ Spacer(Modifier.height(16.dp)) }
         item { SearchRow() }
+        item{ Spacer(Modifier.height(16.dp)) }
+        item { CategoriesRow() }
     }
 }
 
